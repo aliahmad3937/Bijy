@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "243341376080",
+    "project_id": "bijy-8f280",
+    "storage_bucket": "bijy-8f280.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243341376080:android:046cf2d32b250c0c632f55",
+        "android_client_info": {
+          "package_name": "com.codecoy.bijy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243341376080-c2ovet0acgdr3am97upf32iua0oq7lmt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codecoy.bijy",
+            "certificate_hash": "1264e155114807d9adefd20d0ecbba1f5024c92f"
+          }
+        },
+        {
+          "client_id": "243341376080-vs3iv47h0bffhf6s33to2ljeminl21vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6lBtLoG0xqNdOBg43BEwOXrdm2D_D7HA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243341376080-vs3iv47h0bffhf6s33to2ljeminl21vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        android:id="@+id/drawerLayout"
+        tools:context=".users.ui.UserMainScreen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_startup">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_20sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_20sdp" />
+
+            <include
+                android:id="@+id/toolbar_user_main"
+                layout="@layout/owner_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--fragment to display our maps-->
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_user_main" />
+
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="-15dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="0"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+                app:layout_constraintEnd_toEndOf="@id/seekBar"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="@id/seekBar"
+                app:layout_constraintTop_toTopOf="@id/seekBar"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <!--Discrete SeekBAr-->
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                app:dsb_indicatorColor="@color/black"
+                app:dsb_max="200"
+                app:dsb_min="0"
+                app:dsb_progressColor="@color/black"
+                app:dsb_rippleColor="@color/purple_200"
+                app:dsb_trackColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/map"
+                app:layout_constraintStart_toStartOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="-15dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="200km"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="@id/seekBar"
+                app:layout_constraintTop_toTopOf="@id/seekBar"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/create_flag"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="32dp"-->
+<!--                android:background="@drawable/bg_outline_rounbd"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="@dimen/_15sdp"-->
+<!--                android:paddingEnd="@dimen/_5sdp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@id/guideline_end"-->
+<!--                app:layout_constraintStart_toStartOf="@id/guideline_start">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:gravity="center_vertical"-->
+
+<!--                    android:paddingVertical="@dimen/_5sdp"-->
+<!--                    android:text="Create New Flag"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/_16ssp" />-->
+
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_28sdp"-->
+<!--                    android:layout_height="@dimen/_28sdp"-->
+<!--                    android:src="@drawable/circle_flag" />-->
+<!--            </LinearLayout>-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            layout="@layout/left_drawer_menu"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:id="@+id/leftDrawerMenu"/>
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+</layout>

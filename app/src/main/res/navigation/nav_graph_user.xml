@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_user"
+    app:startDestination="@id/userLogin">
+
+    <fragment
+        android:id="@+id/userLogin"
+        android:name="com.codecoy.bijy.users.ui.UserLogin"
+        android:label="UserLogin" >
+        <action
+            android:id="@+id/action_userLogin_to_userSignUp"
+            app:destination="@id/userSignUp" />
+        <action
+            android:id="@+id/action_userLogin_to_userMainScreen"
+            app:destination="@id/userMainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSignUp"
+        android:name="com.codecoy.bijy.users.ui.UserSignUp"
+        android:label="UserSignUp" >
+
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="bijy://user-signup-screen" />
+        <action
+            android:id="@+id/action_userSignUp_to_userLogin"
+            app:destination="@id/userLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMainScreen"
+        android:name="com.codecoy.bijy.users.ui.UserMainScreen"
+        android:label="UserMainScreen">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="bijy://user-main-screen" />
+        <action
+            android:id="@+id/action_userMainScreen_to_userCreateFlag"
+            app:destination="@id/userCreateFlag" />
+        <action
+            android:id="@+id/action_userMainScreen_to_userFlagDetail"
+            app:destination="@id/userFlagDetail" />
+        <action
+            android:id="@+id/action_userMainScreen_to_userProfile"
+            app:destination="@id/userProfile" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/userCreateFlag"
+        android:name="com.codecoy.bijy.users.ui.UserCreateFlag"
+        android:label="UserCreateFlag" >
+        <action
+            android:id="@+id/action_userCreateFlag_to_userMainScreen"
+            app:destination="@id/userMainScreen" />
+        <action
+            android:id="@+id/action_userCreateFlag_to_userProfile"
+            app:destination="@id/userProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFlagDetail"
+        android:name="com.codecoy.bijy.users.ui.UserFlagDetail"
+        android:label="UserFlagDetail" >
+        <argument
+            android:name="flag"
+            app:argType="com.codecoy.bijy.owner.models.Flag" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.codecoy.bijy.users.ui.UserProfile"
+        android:label="UserProfile" >
+        <action
+            android:id="@+id/action_userProfile_to_userMainScreen"
+            app:destination="@id/userMainScreen" />
+        <action
+            android:id="@+id/action_userProfile_to_userCreateFlag"
+            app:destination="@id/userCreateFlag" />
+    </fragment>
+
+
+</navigation>

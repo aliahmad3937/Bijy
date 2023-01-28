@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_owner"
+    app:startDestination="@id/ownerLogin">
+
+
+    <fragment
+        android:id="@+id/ownerLogin"
+        android:name="com.codecoy.bijy.owner.ui.OwnerLogin"
+        android:label="OwnerLogin" >
+        <action
+            android:id="@+id/action_ownerLogin_to_ownerSignUp"
+            app:destination="@id/ownerSignUp" />
+        <action
+            android:id="@+id/action_ownerLogin_to_ownerMainScreen"
+            app:destination="@id/ownerMainScreen"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerSignUp"
+        android:name="com.codecoy.bijy.owner.ui.OwnerSignUp"
+        android:label="OwnerSignUp" >
+        <action
+            android:id="@+id/action_ownerSignUp_to_ownerLogin"
+            app:destination="@id/ownerLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerMainScreen"
+        android:name="com.codecoy.bijy.owner.ui.OwnerMainScreen"
+        android:label="OwnerMainScreen" >
+        <action
+            android:id="@+id/action_ownerMainScreen_to_ownerCreateFlag"
+            app:destination="@id/ownerCreateFlag" />
+        <action
+            android:id="@+id/action_ownerMainScreen_to_ownerFlagStatus"
+            app:destination="@id/ownerFlagStatus" />
+        <action
+            android:id="@+id/action_ownerMainScreen_to_ownerProfile"
+            app:destination="@id/ownerProfile" />
+
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="bijy://owner-main-screen"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerCreateFlag"
+        android:name="com.codecoy.bijy.owner.ui.OwnerCreateFlag"
+        android:label="OwnerCreateFlag" >
+        <action
+            android:id="@+id/action_ownerCreateFlag_to_ownerMainScreen"
+            app:destination="@id/ownerMainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerFlagStatus"
+        android:name="com.codecoy.bijy.owner.ui.OwnerFlagStatus"
+        android:label="OwnerFlagStatus" >
+        <action
+            android:id="@+id/action_ownerFlagStatus_to_ownerMainScreen"
+            app:destination="@id/ownerMainScreen" />
+        <action
+            android:id="@+id/action_ownerFlagStatus_to_ownerCreateFlag"
+            app:destination="@id/ownerCreateFlag" />
+    </fragment>
+    <fragment
+        android:id="@+id/ownerProfile"
+        android:name="com.codecoy.bijy.owner.ui.OwnerProfile"
+        android:label="OwnerProfile">
+        <action
+            android:id="@+id/action_ownerProfile_to_ownerMainScreen"
+            app:destination="@id/ownerMainScreen" />
+
+    </fragment>
+
+
+</navigation>

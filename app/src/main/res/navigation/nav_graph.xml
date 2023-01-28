@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startup">
+
+
+
+
+    <fragment
+        android:id="@+id/startup"
+        android:name="com.codecoy.bijy.Startup"
+        android:label="fragment_startup"
+        tools:layout="@layout/fragment_startup" >
+
+
+        <action
+            android:id="@+id/action_startup_to_owner"
+            app:destination="@id/nav_graph_owner" />
+
+        <action
+            android:id="@+id/action_startup_to_user"
+            app:destination="@id/nav_graph_user" />
+
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph_user" />
+    <include app:graph="@navigation/nav_graph_owner" />
+
+    <action
+        android:id="@+id/action_global_startup"
+        app:destination="@id/startup"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true"
+        />
+
+
+
+
+
+</navigation>

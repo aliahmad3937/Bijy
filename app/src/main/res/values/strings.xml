@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Bijy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_continue_as">Please continue as</string>
+    <string name="owner">Owner</string>
+    <string name="user">User</string>
+    <string name="_owner">owner</string>
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="do_not_have_an_account_please_create_here">Do not have an account?<font color='#262648'> Please create here</font></string>
+    <string name="sign_up">Sign up</string>
+    <string name="name_of_shop">Name of shop</string>
+    <string name="address">Address</string>
+    <string name="gps_address">GPS Address</string>
+    <string name="already_have_an_account_log_in">Already have an account?<font color='#262648'> Log in</font></string>
+
+
+    <string name="map_api_key">AIzaSyDhAq5JksRnXEQwwxCXGNtJpZ_HAPC-XsM</string>
+    <string name="please_select_status_of_your_place">Please Select status of your Place</string>
+    <string name="want_to_change_status_nclick_here"><font color='#FFFFFFFF'>Want To Change Status?</font>\n<font color='#b0b0ff'><u>Click here</u></font></string>
+    <string name="registered">Registering\nAccount...</string>
+    <string name="creating_flag">Flag\nCreating...</string>
+    <string name="updating_flag">Flag\n  Updating...</string>
+    <string name="flag_added">Flag Added Successfully!</string>
+    <string name="flag_updated">Flag Updated successfully!</string>
+    <string name="upload_profile_image">please upload profile image...</string>
+    <string name="password_not_match">Password not match!</string>
+    <string name="my_preferences">Bijy</string>
+    <string name="home">Home</string>
+    <string name="add_new_flag">Add New Flag</string>
+    <string name="subscribe_to_notification">Subscribe to notification</string>
+    <string name="to_put_a_flag_user_must_be_in_100m_nradius_of_that_place">To Put a Flag User Must be in 100m\nRadius of that Place</string>
+    <string name="please_add_your_status">Please Add your Status</string>
+    <string name="add_your_review">Add your Review</string>
+    <string name="owner_status"><u>Owner Status</u></string>
+    <string name="status_added_successfully">Status add Successfully!</string>
+    <string name="update">Update</string>
+
+
+
+
+    <string name="fcm_message">FCM Message</string>
+    <string name="message_subscribe_failed">Failed to subscribe to topic</string>
+    <string name="message_subscribed">Subscription on</string>
+    <string name="egg_notification_channel_id" translatable="false">egg_channel</string>
+    <string name="egg_notification_channel_name" translatable="true">Egg</string>
+    <string name="breakfast_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="breakfast_notification_channel_name" translatable="true">Breakfast</string>
+    <string name="eggs_ready">It is time! Bon appetit!</string>
+    <string name="timer_running">Egg timer is running...</string>
+    <string name="breakfast_notification_channel_description">Breakfast reminder</string>
+    <string name="snooze">Snooze</string>
+    <string name="profile">Profile</string>
+    <string name="notification">Notification</string>
+    <string name="create_flag">Create Flag</string>
+    <string name="updating_user">Updating User...</string>
+    <string name="subscription_off">Subscription Off!</string>
+    <string name="guest">Guest</string>
+    <string name="title_of_shop">Title of Flag</string>
+    <string name="flag_note">Flag Note</string>
+
+</resources>
